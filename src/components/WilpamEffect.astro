@@ -1,0 +1,51 @@
+---
+interface Props {
+  text: string;
+}
+
+import '../styles/defines.css';
+
+const { text } = Astro.props;
+const letters = text.split("");
+---
+
+<span>
+  {letters.map((char) => ( char == " " ? " " :
+    <span class="letter">
+      {char}
+    </span>
+  ))}
+</span>
+
+<style>
+  .letter:nth-child(10n+1) {
+    color: var(--color-liv-light);
+  }
+  .letter:nth-child(10n+2) {
+    color: var(--color-digi-light);
+  }
+  .letter:nth-child(10n+3) {
+    color: var(--color-emerald-light);
+  }
+  .letter:nth-child(10n+4) {
+    color: var(--color-yoosure-light);
+  }
+  .letter:nth-child(10n+5) {
+    color: var(--color-legi-light);
+  }
+  .letter:nth-child(10n+6) {
+    color: var(--color-andrew-light);
+  }
+  .letter:nth-child(10n+7) {
+    color: var(--color-whirl-light);
+  }
+  .letter:nth-child(10n+8) {
+    color: var(--color-quin-light);
+  }
+  .letter:nth-child(10n+9) {
+    color: var(--color-mac-light);
+  }
+  .letter:nth-child(10n) {
+    color: var(--color-lucy-light);
+  }
+</style>

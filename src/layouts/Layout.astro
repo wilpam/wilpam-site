@@ -1,0 +1,47 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import TopBarButton from '../components/TopBarButton.astro';
+import Logo from '../components/Logo.astro'
+import '../styles/defines.css';
+---
+
+<BaseLayout>
+  <div id="top-bar">
+    <span class="top-bar-side">
+      <Logo />
+    </span>
+    <TopBarButton href="/">Home</TopBarButton>
+    <TopBarButton href="/projects">Projects</TopBarButton>
+    <span class="top-bar-side"></span>
+  </div>
+  <div id="page">
+    <slot />
+  </div>
+</BaseLayout>
+
+<style>
+  body {
+    margin: 0;
+    background-color: var(--bg-main);
+    color: white;
+    font-family: var(--font-main)
+  }
+  
+  #top-bar {
+    height: 2rem;
+    padding: 10px;
+    background-color: #0000007f;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  .top-bar-side {
+    flex: 1;
+  }
+
+  #page {
+    padding: 10px;
+  }
+
+</style>

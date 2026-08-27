@@ -1,0 +1,80 @@
+:root {
+  --bg-main: #202028;
+
+  --color-andrew-dark: #6A0000;
+  --color-digi-dark: #167844;
+  --color-emerald-dark: #66132E;
+  --color-legi-dark: #147214;
+  --color-liv-dark: #704200;
+  --color-lucy-dark: #622B75;
+  --color-mac-dark: #833B00;
+  --color-quin-dark: #403466;
+  --color-whirl-dark: #006C69;
+  --color-yoosure-dark: #3D1970;
+
+  --color-andrew: #B20000;
+  --color-digi: #25C972;
+  --color-emerald: #AA214D;
+  --color-legi: #22be22;
+  --color-liv: #bb6f00;
+  --color-lucy: #a449c4;
+  --color-mac: #db6300;
+  --color-quin: #6b57ab;
+  --color-whirl: #00b4b0;
+  --color-yoosure: #672bbc;
+
+  --color-andrew-light: #D06666;
+  --color-digi-light: #7CDEAA;
+  --color-emerald-light: #CC7994;
+  --color-legi-light: #7AD87A;
+  --color-liv-light: #D6A866;
+  --color-lucy-light: #C891DB;
+  --color-mac-light: #E9A166;
+  --color-quin-light: #A69ACC;
+  --color-whirl-light: #66D2CF;
+  --color-yoosure-light: #A37FD6;
+
+  --font-main: sans-serif; /* find an actual font later */
+}
+
+/* following classes exist because dynamic css is quite lacking in astro */
+
+.andrew-card {
+  background-color: var(--color-andrew-dark)
+}
+
+.digi-card {
+  background-color: var(--color-digi-dark)
+}
+
+.emerald-card {
+  background-color: var(--color-emerald-dark)
+}
+
+.legi-card {
+  background-color: var(--color-legi-dark)
+}
+
+.liv-card {
+  background-color: var(--color-liv-dark)
+}
+
+.lucy-card {
+  background-color: var(--color-lucy-dark)
+}
+
+.mac-card {
+  background-color: var(--color-mac-dark)
+}
+
+.quin-card {
+  background-color: var(--color-quin-dark)
+}
+
+.whirl-card {
+  background-color: var(--color-whirl-dark)
+}
+
+.yoosure-card {
+  background-color: var(--color-yoosure-dark)
+}

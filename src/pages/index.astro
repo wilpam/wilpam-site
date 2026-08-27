@@ -1,17 +1,65 @@
 ---
-
+import Layout from "../layouts/Layout.astro"
+import NarrowPage from "../components/NarrowPage.astro";
+import WilpamEffect from "../components/WilpamEffect.astro";
+import WilpamiteCard from "../components/WilpamiteCard.astro";
+import QnA from "../components/QnA.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<NarrowPage>
+		<h1>Welcome to the website of <WilpamEffect text="wilpam erkithe eolesl" />!</h1>
+		<p>We are a group of 10 people who occasionally do indescribable things.</p>
+
+		<div class="cards-row">
+			<WilpamiteCard name="Liv" cardClass="liv-card">
+				Liv is Liv
+			</WilpamiteCard>
+			<WilpamiteCard name="Digi" cardClass="digi-card">
+				Digi is Digi
+			</WilpamiteCard>
+			<WilpamiteCard name="Emerald" cardClass="emerald-card">
+				Emerald is Emerald
+			</WilpamiteCard>
+			<WilpamiteCard name="Yoosure" cardClass="yoosure-card">
+				Yoosure is Yoosure
+			</WilpamiteCard>
+			<WilpamiteCard name="Legi" cardClass="legi-card">
+				Legi is Legi
+			</WilpamiteCard>
+		</div>
+
+		<div class="cards-row">
+			<WilpamiteCard name="Andrew" cardClass="andrew-card">
+				Andrew is Andrew
+			</WilpamiteCard>
+			<WilpamiteCard name="Whirl" cardClass="whirl-card">
+				Whirl is Whirl
+			</WilpamiteCard>
+			<WilpamiteCard name="Quin" cardClass="quin-card">
+				Quin is Quin
+			</WilpamiteCard>
+			<WilpamiteCard name="Mac" cardClass="mac-card">
+				Mac is Mac
+			</WilpamiteCard>
+			<WilpamiteCard name="Lucy" cardClass="lucy-card">
+				Lucy is Lucy
+			</WilpamiteCard>
+		</div>
+	
+
+		<QnA question="Why are you called that?">
+			j
+		</QnA>
+
+	</NarrowPage>
+</Layout>
+
+<style>
+	.cards-row {
+		max-width: 100%;
+		display: flex;
+		padding: 1rem 2rem;
+		gap: 2rem;
+	}
+</style>

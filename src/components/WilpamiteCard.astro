@@ -1,0 +1,32 @@
+---
+const { name, cardClass } = Astro.props
+const cardClasses = `card ${cardClass}`
+---
+
+<div class={cardClasses}>
+  <div id="name">{name}</div>
+  <div id="description"><slot/></div>
+</div>
+
+<style>
+
+  .card {
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  #name {
+    width: 100%;
+    text-align: center;
+    font-size: 16pt;
+  }
+
+  #description {
+    width: 100%;
+    text-align: center;
+  }
+
+</style>
