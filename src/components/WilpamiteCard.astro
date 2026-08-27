@@ -1,11 +1,17 @@
 ---
-const { name, cardClass, pronouns } = Astro.props
+const { name, cardClass, pronouns, site } = Astro.props
 const cardClasses = `card ${cardClass}`
+import { Image } from "astro:assets";
+import LinkImage from "../assets/icons/link.svg"
 ---
 
 <div class={cardClasses}>
   <div id="top">
-    <span id="first">?</span>
+    {
+      site ?
+      <span id="first"><a href={site}><Image id="link-image" src={LinkImage} alt="Link" height="16" /></a></span>
+      : <span id="first"></span>
+    }
     <span id="name">{name}</span>
     <span id="pronouns">{pronouns}</span>
   </div>
@@ -30,6 +36,10 @@ const cardClasses = `card ${cardClass}`
   #first {
     color: #ffffff7f;
     flex: 1;
+  }
+
+  #link-image {
+    filter: invert() opacity(50%);
   }
 
   #name {
