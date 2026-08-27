@@ -1,10 +1,14 @@
 ---
-const { name, cardClass } = Astro.props
+const { name, cardClass, pronouns } = Astro.props
 const cardClasses = `card ${cardClass}`
 ---
 
 <div class={cardClasses}>
-  <div id="name">{name}</div>
+  <div id="top">
+    <span id="first">?</span>
+    <span id="name">{name}</span>
+    <span id="pronouns">{pronouns}</span>
+  </div>
   <div id="description"><slot/></div>
 </div>
 
@@ -18,10 +22,26 @@ const cardClasses = `card ${cardClass}`
     min-width: 0;
   }
 
-  #name {
+  #top {
     width: 100%;
+    display: flex;
+  }
+
+  #first {
+    color: #ffffff7f;
+    flex: 1;
+  }
+
+  #name {
     text-align: center;
     font-size: 16pt;
+    flex: 1;
+  }
+
+  #pronouns {
+    text-align: right;
+    color: #ffffff7f;
+    flex: 1;
   }
 
   #description {
