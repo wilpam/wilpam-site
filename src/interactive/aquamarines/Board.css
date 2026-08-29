@@ -1,0 +1,10 @@
+#board {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#board-img {
+  width: 425px;
+  user-select: none;
+}

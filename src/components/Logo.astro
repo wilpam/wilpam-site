@@ -3,14 +3,17 @@ import { Image } from 'astro:assets';
 import LogoImage from '../assets/logo.png'
 ---
 
-<span>
-  <Image id="logo-image" src={LogoImage} alt="Wilpam logo" height="32" width="32" />
-  wilpam
-</span>
+<a href="/">
+  <span>
+    <Image id="logo-image" src={LogoImage} alt="Wilpam logo" height="32" width="32" />
+    wilpam
+  </span>
+</a>
 
 <style>
   span {
     font-size: 16pt;
+    color: white;
   }
 
   #logo-image {

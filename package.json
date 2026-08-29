@@ -1,5 +1,4 @@
 {
-  "name": "",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -12,9 +11,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.2.7"
+    "@astrojs/react": "^6.0.4",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "astro": "^7.2.7",
+    "react": "^19.2.8"
   },
   "allowScripts": {
     "esbuild": true
+  },
+  "devDependencies": {
+    "@types/react-router": "^5.1.20"
   }
 }

@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Bahnschrift";
+  src:
+    local("Bahnschrift"),
+    url('/fonts/bahnschrift.woff2') format('woff2');
+}
+
 :root {
   --bg-main: #202028;
 
@@ -34,7 +41,7 @@
   --color-whirl-light: #66D2CF;
   --color-yoosure-light: #A37FD6;
 
-  --font-main: sans-serif; /* find an actual font later */
+  --font-main: "Bahnschrift", sans-serif;
 }
 
 /* following classes exist because dynamic css is quite lacking in astro */
