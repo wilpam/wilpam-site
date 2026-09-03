@@ -1,0 +1,8 @@
+.highlight {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  transform: translate(-16px, -16px);
+  background-color: #FFFFFFB7;
+  border-radius: 50%
+}

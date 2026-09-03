@@ -7,6 +7,6 @@ export function Game() {
   const [board, setBoard] = useState<BoardState>(initialPieces.clone())
 
   return (
-    <Board pieces={board.pieces}></Board>
+    <Board boardState={board}></Board>
   );
 }

@@ -1,0 +1,6 @@
+.flag {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  /*transform: translate(-24px, -24px);*/
+}
