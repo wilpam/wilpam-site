@@ -1,3 +1,8 @@
+export interface PositionJ {
+    x: number;
+    y: number;
+}
+
 export class Position {
     x: number;
     y: number;
@@ -23,5 +28,9 @@ export class Position {
 
     clone(): Position {
         return new Position(this.x, this.y);
+    }
+
+    static remake(json: PositionJ) {
+        return new Position(json.x, json.y);
     }
 }

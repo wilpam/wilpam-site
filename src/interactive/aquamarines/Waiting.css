@@ -1,0 +1,24 @@
+#aq-waiting {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#aq-waiting-vert {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#aq-waiting-vert p {
+  margin: 8px;
+}
+
+#aq-waiting-code {
+  font-size: 16pt;
+}
+
+.aq-unselectable {
+  user-select: none;
+}

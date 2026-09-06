@@ -1,4 +1,6 @@
-import { PieceState } from "./PieceState";
+import { PieceState, type PieceStateJ } from "./PieceState";
+
+export interface BoardStateJ {pieces: PieceStateJ[], whiteHand: number, blackHand: number, whiteTurn: boolean, secondPhase: boolean}
 
 export class BoardState {
 
@@ -23,6 +25,16 @@ export class BoardState {
       this.blackHand,
       this.whiteTurn,
       this.secondPhase
+    )
+  }
+
+  static remake(json: BoardStateJ) {
+    return new BoardState(
+      json.pieces.map((o) => (PieceState.remake(o))),
+      json.whiteHand,
+      json.blackHand,
+      json.whiteTurn,
+      json.secondPhase
     )
   }
 

@@ -23,7 +23,7 @@ export function Piece({white, commander, position, onClick}: Props) {
   let piece_image = commander ? (white ? "commander" : "commander_blue") : (white ? "piece" : "piece_blue");
 
   return (
-      <div className="piece" style={{
+      <div className="aq-piece" style={{
         top: `calc(50% + ${piece_y}px)`,
         left: `calc(50% + ${piece_x}px)`,
         backgroundImage: `url("/aquamarines/${piece_image}.png")`

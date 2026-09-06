@@ -20,7 +20,7 @@ export function Highlight({piece, position, onClick}: Props) {
   let piece_y = base_position[1] + x_vector[1] * position.x + y_vector[1] * position.y;
 
   return (
-      <div className="highlight" style={{
+      <div className="aq-highlight" style={{
         top: `calc(50% + ${piece_y}px)`,
         left: `calc(50% + ${piece_x}px)`,
       }}

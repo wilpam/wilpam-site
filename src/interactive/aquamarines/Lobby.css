@@ -1,0 +1,47 @@
+#aq-lobby {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#aq-lobby-vert {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  user-select: none;
+  max-width: 192px;
+}
+
+#aq-title {
+  color: #488b97;
+}
+
+.aq-lobby-button {
+  border: 1px solid #488b97;
+  padding: 5px 0;
+}
+
+.aq-lobby-button:hover {
+  background-color: #488b977f;
+}
+
+.aq-id-input {
+  background-color: #488b973f;
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  border-color: #488b97;
+  color: white;
+  font-family: 'Bahnschrift';
+  text-align: center;
+  padding-top: 3px;
+}
+
+.aq-id-input:focus {
+  outline: none;
+}
+
+.aq-id-input::placeholder {
+  color: #488b97;
+  opacity: 1;
+}
