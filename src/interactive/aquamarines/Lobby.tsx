@@ -1,8 +1,8 @@
 import { useRef, useState, type RefObject } from "react";
 import "./Lobby.css";
-import { WDClient } from "wp2p/WD";
+import { WDClient } from "@wilpam/wp2p/WD";
 import { aqGame, aqURL } from "./wp2p/Constants";
-import type { JoinResponseEvent, WPCloseEvent } from "wp2p";
+import type { JoinResponseEvent, WPCloseEvent } from "@wilpam/wp2p";
 
 interface Props {
   client: RefObject<WDClient | null>;

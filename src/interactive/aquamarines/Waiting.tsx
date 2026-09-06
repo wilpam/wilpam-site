@@ -1,5 +1,5 @@
 import { type RefObject } from "react";
-import { WDClient } from "wp2p/WD";
+import { WDClient } from "@wilpam/wp2p/WD";
 import "./Waiting.css";
 
 interface Props {

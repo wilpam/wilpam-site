@@ -8,7 +8,7 @@ import { BoardState } from "./logic/BoardState";
 import { availableSpaces, checkGameCondition, doPhase, GameCondition, movePiece } from "./logic/Logic";
 import { HandPiece } from "./HandPiece";
 import { Flag } from "./Flag";
-import type { WDClient } from "wp2p/WD";
+import type { WDClient } from "@wilpam/wp2p/WD";
 import { InfoBar } from "./InfoBar";
 
 interface Props {

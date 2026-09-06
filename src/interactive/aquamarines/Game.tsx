@@ -3,9 +3,8 @@ import { Board } from "./Board";
 import { BoardState } from "./logic/BoardState"
 import { initialPieces } from "./logic/Constants";
 import { Lobby } from "./Lobby";
-import { WDClient } from "wp2p/WD";
+import { WDClient } from "@wilpam/wp2p/WD";
 import { Waiting } from "./Waiting";
-import { boolean } from "astro:schema";
 
 export function Game() {
   const [board, setBoard] = useState<BoardState>(initialPieces.clone())
