@@ -48,10 +48,20 @@ import QnA from "../components/QnA.astro";
 			</WilpamiteCard>
 		</div>
 	
+		<h2>Q&A</h2>
 
-		<QnA question="Why are you called that?">
-			j
-		</QnA>
+		<div class="qnas">
+
+			<QnA question="Why are you called that?">
+				j
+			</QnA>
+
+			<QnA question="What things do you do, exactly?">
+				Indescribable.<br>
+				But if you have to know, mostly programming projects, worldbuilding, and everything you can imagine goes with those.
+			</QnA>
+
+		</div>
 
 	</NarrowPage>
 </Layout>
@@ -62,5 +72,12 @@ import QnA from "../components/QnA.astro";
 		display: flex;
 		padding: 1rem 2rem;
 		gap: 2rem;
+	}
+
+	.qnas {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 1rem;
 	}
 </style>

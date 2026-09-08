@@ -2,7 +2,13 @@
 const { question } = Astro.props
 ---
 
-<div>
-  <p>Q: {question}</p>
-  <p>A: <slot /></p>
-</div>
+<table class="qna">
+  <tr><td><strong>Q</strong>:</td><td>{question}</td></tr>
+  <tr><td><strong>A</strong>:</td><td><slot /></td></tr>
+</table>
+
+<style>
+  .qna td {
+    vertical-align: top;
+  }
+</style>
