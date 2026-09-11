@@ -1,0 +1,15 @@
+---
+const { name, link, author, date } = Astro.props
+---
+
+<div>
+  <a href={link}>{name}</a><br>
+  <span class="post-metadata">by {author} - {date}</span>
+</div>
+
+<style>
+  .post-metadata {
+    opacity: 50%;
+    font-size: smaller;
+  }
+</style>

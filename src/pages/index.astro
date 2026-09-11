@@ -1,70 +1,67 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import NarrowPage from "../components/NarrowPage.astro";
 import WilpamEffect from "../components/WilpamEffect.astro";
 import WilpamiteCard from "../components/WilpamiteCard.astro";
 import QnA from "../components/QnA.astro";
+import NarrowLayout from "../layouts/NarrowLayout.astro";
 ---
 
-<Layout>
-	<NarrowPage>
-		<h1>Welcome to the website of <WilpamEffect text="wilpam erkithe eolesl" />!</h1>
-		<p>We are a group of 10 people who occasionally do indescribable things.</p>
+<NarrowLayout>
+	<h1>Welcome to the website of <WilpamEffect text="wilpam erkithe eolesl" />!</h1>
+	<p>We are a group of 10 people who occasionally do indescribable things.</p>
 
-		<div class="cards-row">
-			<WilpamiteCard name="Liv" pronouns="he/him" cardClass="liv-card">
-				Liv is an aspiring author, occasional world-builder as well as self described “queer of the year”.
-			</WilpamiteCard>
-			<WilpamiteCard name="Digi" pronouns="he/him" cardClass="digi-card" site="https://digital.accorp.net/">
-				Digi is a programmer and designer of all things he can get his hands on.
-			</WilpamiteCard>
-			<WilpamiteCard name="Emerald" pronouns="he/him" cardClass="emerald-card">
-				Emerald: the Resident Chaos Entity
-			</WilpamiteCard>
-			<WilpamiteCard name="Yoosure" pronouns="he/him" cardClass="yoosure-card">
-				Yoosure is sometimes a musician but mostly a random kid at the function
-			</WilpamiteCard>
-			<WilpamiteCard name="Legi" pronouns="he/him" cardClass="legi-card" site="https://legitsi.neocities.org">
-				Legi is the historian and one of the creative minds of the group.
-			</WilpamiteCard>
-		</div>
+	<div class="cards-row">
+		<WilpamiteCard name="Liv" pronouns="he/him" cardClass="liv-card">
+			Liv is an aspiring author, occasional world-builder as well as self described “queer of the year”.
+		</WilpamiteCard>
+		<WilpamiteCard name="Digi" pronouns="he/him" cardClass="digi-card" site="https://digital.accorp.net/">
+			Digi is a programmer and designer of all things he can get his hands on.
+		</WilpamiteCard>
+		<WilpamiteCard name="Emerald" pronouns="he/him" cardClass="emerald-card">
+			Emerald: the Resident Chaos Entity
+		</WilpamiteCard>
+		<WilpamiteCard name="Yoosure" pronouns="he/him" cardClass="yoosure-card">
+			Yoosure is sometimes a musician but mostly a random kid at the function
+		</WilpamiteCard>
+		<WilpamiteCard name="Legi" pronouns="he/him" cardClass="legi-card" site="https://legitsi.neocities.org">
+			Legi is the historian and one of the creative minds of the group.
+		</WilpamiteCard>
+	</div>
 
-		<div class="cards-row">
-			<WilpamiteCard name="Andrew" pronouns="he/him" cardClass="andrew-card" site="https://andrewtheblueskier.bsky.social">
-				Andrew is a stereotypical all-purpose nerd as well as a nonpracticing worldbuilder and creative.
-			</WilpamiteCard>
-			<WilpamiteCard name="Whirl" pronouns="he/him" cardClass="whirl-card" site="https://whirli.ng">
-				Whirl is a programmer <s>and professional stealer of ideas</s>
-			</WilpamiteCard>
-			<WilpamiteCard name="Quin" pronouns="he/him" cardClass="quin-card">
-			</WilpamiteCard>
-			<WilpamiteCard name="Mac" pronouns="any" cardClass="mac-card">
-				Mac is a worldbuilder and aspiring aspirer.
-			</WilpamiteCard>
-			<WilpamiteCard name="Lucy" pronouns="any" cardClass="lucy-card">
-				Lucy is wawa and do wawa all over the place
-				<br>
-				"also im a dumb fucking furry" - Lucy
-			</WilpamiteCard>
-		</div>
-	
-		<h2>Q&A</h2>
+	<div class="cards-row">
+		<WilpamiteCard name="Andrew" pronouns="he/him" cardClass="andrew-card" site="https://andrewtheblueskier.bsky.social">
+			Andrew is a stereotypical all-purpose nerd as well as a nonpracticing worldbuilder and creative.
+		</WilpamiteCard>
+		<WilpamiteCard name="Whirl" pronouns="he/him" cardClass="whirl-card" site="https://whirli.ng">
+			Whirl is a programmer <s>and professional stealer of ideas</s>
+		</WilpamiteCard>
+		<WilpamiteCard name="Quin" pronouns="he/him" cardClass="quin-card">
+		</WilpamiteCard>
+		<WilpamiteCard name="Mac" pronouns="any" cardClass="mac-card">
+			Mac is a worldbuilder and aspiring aspirer.
+		</WilpamiteCard>
+		<WilpamiteCard name="Lucy" pronouns="any" cardClass="lucy-card">
+			Lucy is wawa and do wawa all over the place
+			<br>
+			"also im a dumb fucking furry" - Lucy
+		</WilpamiteCard>
+	</div>
 
-		<div class="qnas">
+	<h2>Q&A</h2>
 
-			<QnA question="Why are you called that?">
-				j
-			</QnA>
+	<div class="qnas">
 
-			<QnA question="What things do you do, exactly?">
-				Indescribable.<br>
-				But if you have to know, mostly programming projects, worldbuilding, and everything you can imagine goes with those.
-			</QnA>
+		<QnA question="Why are you called that?">
+			j
+		</QnA>
 
-		</div>
+		<QnA question="What things do you do, exactly?">
+			Indescribable.<br>
+			But if you have to know, mostly programming projects, worldbuilding, and everything you can imagine goes with those.
+		</QnA>
 
-	</NarrowPage>
-</Layout>
+	</div>
+
+</NarrowLayout>
 
 <style>
 	.cards-row {

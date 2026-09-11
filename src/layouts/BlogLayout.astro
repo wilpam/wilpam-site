@@ -1,0 +1,23 @@
+---
+import NarrowLayout from "./NarrowLayout.astro";
+const { frontmatter } = Astro.props;
+const { title, author, date } = frontmatter;
+---
+
+<NarrowLayout>
+  <div id="blog-header">
+    <h1>{title}</h1>
+    <div id="blog-subheader">
+      by {author} - {date.slice(0,10)}
+    </div>
+  </div>
+  <slot />
+</NarrowLayout>
+
+<style>
+  #blog-subheader {
+    opacity: 50%;
+    font-size: smaller;
+    transform: translateY(-1rem);
+  }
+</style>

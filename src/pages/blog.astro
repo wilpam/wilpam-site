@@ -1,0 +1,28 @@
+---
+import BlogPost from "../components/BlogPost.astro";
+import NarrowLayout from "../layouts/NarrowLayout.astro";
+---
+
+<NarrowLayout>
+	<h1 id="welcome">Welcome to our blog</h1>
+	<ul id="entries">
+		<!-- put future blog posts at the top of the list -->
+		<li><BlogPost name="Welcome" link="/blog/welcome" author="Digi" date="2026-09-11" /></li>
+	</ul>
+</NarrowLayout>
+
+<style>
+	#entries {
+		list-style-type: none;
+		padding-left: 0;
+	}
+</style>
+
+<script>
+	const vowels = ["a","e","i","u","a","e","i","u","æ","ə"];
+	let idx = Math.floor(Math.random()*vowels.length);
+	const welcome = document.getElementById("welcome")
+	if (welcome) {
+		welcome.innerHTML = `Welcome to our bl${vowels[idx]}g!`
+	}
+</script>

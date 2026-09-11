@@ -1,13 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import NarrowPage from "../components/NarrowPage.astro";
 import AquamarinesApp from "../interactive/aquamarines/App.tsx"
+import NarrowLayout from "../layouts/NarrowLayout.astro";
 ---
 
-<Layout>
-	<NarrowPage>
-		<h1>Aquamarines</h1>
-    <p>A game about naval warfare. With rhombuses</p>
-		<AquamarinesApp client:load></AquamarinesApp>
-	</NarrowPage>
-</Layout>
+<NarrowLayout>
+	<h1>Aquamarines</h1>
+	<p>A game about naval warfare. With rhombuses</p>
+	<AquamarinesApp client:load></AquamarinesApp>
+</NarrowLayout>

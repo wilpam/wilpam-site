@@ -1,17 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import NarrowPage from "../components/NarrowPage.astro";
+import NarrowLayout from "../layouts/NarrowLayout.astro";
 ---
 
-<Layout>
-	<NarrowPage>
-		<h1>This is the projects page where we are projects</h1>
-		<div id="projects">
-			<a href="/aquamarines">Aquamarines</a>
-			<a href="/ask.png" style="opacity: 0;">...</a>
-		</div>
-	</NarrowPage>
-</Layout>
+<NarrowLayout>
+	<h1>This is the projects page where we are projects</h1>
+	<div id="projects">
+		<a href="/aquamarines">Aquamarines</a>
+		<a href="/ask.png" style="opacity: 0;">...</a>
+	</div>
+</NarrowLayout>
 
 <style>
 	#projects {

@@ -1,0 +1,17 @@
+---
+import Layout from "./Layout.astro";
+---
+
+<Layout>
+  <div id="narrower">
+    <slot />
+  </div>
+</Layout>
+
+<style>
+  #narrower {
+		box-sizing: border-box;
+    width: 100%;
+    padding: 0 10rem;
+  }
+</style>
