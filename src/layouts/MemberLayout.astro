@@ -1,0 +1,79 @@
+---
+import BlogPost from "../components/BlogPost.astro";
+import NarrowLayout from "./NarrowLayout.astro";
+import { formatDate, postTags, type BlogPostData } from "../data/blog";
+import type { Person } from "../data/people";
+import LinkImage from "../assets/icons/link.svg";
+import {Image} from "astro:assets";
+
+const { person, posts } = Astro.props as {
+  person: Person;
+  posts: BlogPostData[];
+};
+
+const memberBackground = `var(--color-${person.slug}-background)`;
+const memberLight = `var(--color-${person.slug})`;
+---
+
+<div class="member-page" style={`--member-background: ${memberBackground}; --member-light: ${memberLight}`}>
+  <NarrowLayout>
+    <h1 class={`${person.slug}-author title`}>{person.name}
+      {
+        person.site ?
+            <span id="link"> |&nbsp;<a id="ref" href={person.site}> Their website <Image id="link-image" src={LinkImage} alt={`Link to ${person.name}'s website`} height="16" /></a></span>
+            : <span id="link"></span>
+      }
+    </h1>
+    <p set:html={person.description}></p>
+
+    <hr />
+    {Astro.slots.has('default') && (
+        <slot />
+        <hr />
+    )}
+
+    <h2>Posts by {person.name}</h2>
+    <ul id="entries">
+      {posts.length == 0 && `${person.name} has no posts.`}
+      {posts.map((post) => <li><BlogPost name={post.frontmatter.title} link={post.url} author={post.frontmatter.author} date={formatDate(post.frontmatter.date)} tags={postTags(post)} /></li>)}
+    </ul>
+  </NarrowLayout>
+</div>
+
+<style>
+  /*noinspection CssUnresolvedCustomProperty*/
+  .member-page {
+    min-height: 100vh;
+    background-color: var(--member-background);
+  }
+
+  #entries {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .title {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: -6px;
+  }
+
+  #link-image {
+    filter: invert();
+  }
+
+  #link {
+    font-size: medium;
+    font-weight: normal;
+    padding-bottom: 2px;
+    opacity: 75%;
+  }
+
+  /*noinspection CssUnresolvedCustomProperty*/
+  hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, var(--member-light), hsl(from var(--member-light) h s l / 0%) 80%);
+  }
+</style>

@@ -1,0 +1,9 @@
+---
+import MemberLayout from "../../layouts/MemberLayout.astro";
+import { postsByAuthor } from "../../data/blog";
+import { getPersonBySlug } from "../../data/people";
+
+const person = getPersonBySlug("legi")!;
+---
+
+<MemberLayout person={person} posts={postsByAuthor(person.name)} />

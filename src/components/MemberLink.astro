@@ -1,0 +1,15 @@
+---
+import { getPersonByName, slugify } from "../data/people";
+
+interface Props {
+    name: string;
+    uncolored?: boolean;
+}
+
+const { name, uncolored = false } = Astro.props;
+const person = getPersonByName(name);
+const slug = person?.slug ?? slugify(name);
+const href = `/member/${slug}`;
+---
+{!uncolored && <a class={`${slug}-member`} href={href}><slot>{name}</slot></a>}
+{uncolored && <a href={href}><slot>{name}</slot></a>}

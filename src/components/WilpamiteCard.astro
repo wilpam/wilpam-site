@@ -1,26 +1,26 @@
 ---
-const { name, cardClass, pronouns, site } = Astro.props
+const { name, cardClass, pronouns, site, description } = Astro.props
 const cardClasses = `card ${cardClass}`
+const authorId = `author-${name.toLowerCase()}`
 import { Image } from "astro:assets";
 import LinkImage from "../assets/icons/link.svg"
+import MemberLink from "./MemberLink.astro";
 ---
 
-<div class={cardClasses}>
+<div id={authorId} class={cardClasses}>
   <div id="top">
-    {
-      site ?
-      <span id="first"><a href={site}><Image id="link-image" src={LinkImage} alt="Link" height="16" /></a></span>
-      : <span id="first"></span>
-    }
+    <span id="first"><MemberLink name={name}><Image id="link-image" src={LinkImage} alt="Link" height="16" /></MemberLink></span>
     <span id="name">{name}</span>
     <span id="pronouns">{pronouns}</span>
   </div>
-  <div id="description"><slot/></div>
+  <div id="description" set:html={description}></div>
 </div>
 
 <style>
 
   .card {
+    display: flex;
+    flex-direction: column;
     padding: 5px;
     border: 1px solid white;
     border-radius: 0.5rem;
@@ -58,5 +58,4 @@ import LinkImage from "../assets/icons/link.svg"
     width: 100%;
     text-align: center;
   }
-
 </style>

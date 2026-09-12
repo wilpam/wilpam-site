@@ -8,38 +8,67 @@
 :root {
   --bg-main: #202028;
 
-  --color-andrew-dark: #6A0000;
-  --color-digi-dark: #167844;
-  --color-emerald-dark: #66132E;
-  --color-legi-dark: #147214;
-  --color-liv-dark: #704200;
-  --color-lucy-dark: #622B75;
-  --color-mac-dark: #833B00;
-  --color-quin-dark: #403466;
-  --color-whirl-dark: #006C69;
-  --color-yoosure-dark: #3D1970;
+  --color-andrew-base: #B20000;
+  --color-digi-base: #25C972;
+  --color-emerald-base: #AA214D;
+  --color-legi-base: #22be22;
+  --color-liv-base: #bb6f00;
+  --color-lucy-base: #a449c4;
+  --color-mac-base: #db6300;
+  --color-quin-base: #6b57ab;
+  --color-whirl-base: #00b4b0;
+  --color-yoosure-base: #672bbc;
 
-  --color-andrew: #B20000;
-  --color-digi: #25C972;
-  --color-emerald: #AA214D;
-  --color-legi: #22be22;
-  --color-liv: #bb6f00;
-  --color-lucy: #a449c4;
-  --color-mac: #db6300;
-  --color-quin: #6b57ab;
-  --color-whirl: #00b4b0;
-  --color-yoosure: #672bbc;
+  --color-background-sat-factor: 5;
+  --color-light-sat-factor: 1.2;
+  --color-background-lightness: 12%;
+  --color-dark-lightness: 20%;
+  --color-default-lightness: 50%;
+  --color-light-lightness: 75%;
 
-  --color-andrew-light: #D06666;
-  --color-digi-light: #7CDEAA;
-  --color-emerald-light: #CC7994;
-  --color-legi-light: #7AD87A;
-  --color-liv-light: #D6A866;
-  --color-lucy-light: #C891DB;
-  --color-mac-light: #E9A166;
-  --color-quin-light: #A69ACC;
-  --color-whirl-light: #66D2CF;
-  --color-yoosure-light: #A37FD6;
+  --color-andrew-background: hsl(from var(--color-andrew-base) h calc(s / var(--color-background-sat-factor)) var(--color-background-lightness) / 100%);
+  --color-digi-background: hsl(from var(--color-digi-base) h calc(s / var(--color-background-sat-factor)) var(--color-background-lightness) / 100%);
+  --color-emerald-background: hsl(from var(--color-emerald-base) h calc(s / var(--color-background-sat-factor)) var(--color-background-lightness) / 100%);
+  --color-legi-background: hsl(from var(--color-legi-base) h calc(s / var(--color-background-sat-factor)) var(--color-background-lightness) / 100%);
+  --color-liv-background: hsl(from var(--color-liv-base) h calc(s / var(--color-background-sat-factor)) var(--color-background-lightness) / 100%);
+  --color-lucy-background: hsl(from var(--color-lucy-base) h calc(s / var(--color-background-sat-factor)) var(--color-background-lightness) / 100%);
+  --color-mac-background: hsl(from var(--color-mac-base) h calc(s / var(--color-background-sat-factor)) var(--color-background-lightness) / 100%);
+  --color-quin-background: hsl(from var(--color-quin-base) h calc(s / var(--color-background-sat-factor)) var(--color-background-lightness) / 100%);
+  --color-whirl-background: hsl(from var(--color-whirl-base) h calc(s / var(--color-background-sat-factor)) var(--color-background-lightness) / 100%);
+  --color-yoosure-background: hsl(from var(--color-yoosure-base) h calc(s / var(--color-background-sat-factor)) var(--color-background-lightness) / 100%);
+
+  --color-andrew-dark: hsl(from var(--color-andrew-base) h s var(--color-dark-lightness) / 100%);
+  --color-digi-dark: hsl(from var(--color-digi-base) h s var(--color-dark-lightness) / 100%);
+  --color-emerald-dark: hsl(from var(--color-emerald-base) h s var(--color-dark-lightness) / 100%);
+  --color-legi-dark: hsl(from var(--color-legi-base) h s var(--color-dark-lightness) / 100%);
+  --color-liv-dark: hsl(from var(--color-liv-base) h s var(--color-dark-lightness) / 100%);
+  --color-lucy-dark: hsl(from var(--color-lucy-base) h s var(--color-dark-lightness) / 100%);
+  --color-mac-dark: hsl(from var(--color-mac-base) h s var(--color-dark-lightness) / 100%);
+  --color-quin-dark: hsl(from var(--color-quin-base) h s var(--color-dark-lightness) / 100%);
+  --color-whirl-dark: hsl(from var(--color-whirl-base) h s var(--color-dark-lightness) / 100%);
+  --color-yoosure-dark: hsl(from var(--color-yoosure-base) h s var(--color-dark-lightness) / 100%);
+
+  --color-andrew: hsl(from var(--color-andrew-base) h s var(--color-default-lightness) / 100%);
+  --color-digi: hsl(from var(--color-digi-base) h s var(--color-default-lightness) / 100%);
+  --color-emerald: hsl(from var(--color-emerald-base) h s var(--color-default-lightness) / 100%);
+  --color-legi: hsl(from var(--color-legi-base) h s var(--color-default-lightness) / 100%);
+  --color-liv: hsl(from var(--color-liv-base) h s var(--color-default-lightness) / 100%);
+  --color-lucy: hsl(from var(--color-lucy-base) h s var(--color-default-lightness) / 100%);
+  --color-mac: hsl(from var(--color-mac-base) h s var(--color-default-lightness) / 100%);
+  --color-quin: hsl(from var(--color-quin-base) h s var(--color-default-lightness) / 100%);
+  --color-whirl: hsl(from var(--color-whirl-base) h s var(--color-default-lightness) / 100%);
+  --color-yoosure: hsl(from var(--color-yoosure-base) h s var(--color-default-lightness) / 100%);
+
+  --color-andrew-light: hsl(from var(--color-andrew-base) h calc(s / var(--color-light-sat-factor)) var(--color-light-lightness) / 100%);
+  --color-digi-light: hsl(from var(--color-digi-base) h calc(s / var(--color-light-sat-factor)) var(--color-light-lightness) / 100%);
+  --color-emerald-light: hsl(from var(--color-emerald-base) h calc(s / var(--color-light-sat-factor)) var(--color-light-lightness) / 100%);
+  --color-legi-light: hsl(from var(--color-legi-base) h calc(s / var(--color-light-sat-factor)) var(--color-light-lightness) / 100%);
+  --color-liv-light: hsl(from var(--color-liv-base) h calc(s / var(--color-light-sat-factor)) var(--color-light-lightness) / 100%);
+  --color-lucy-light: hsl(from var(--color-lucy-base) h calc(s / var(--color-light-sat-factor)) var(--color-light-lightness) / 100%);
+  --color-mac-light: hsl(from var(--color-mac-base) h calc(s / var(--color-light-sat-factor)) var(--color-light-lightness) / 100%);
+  --color-quin-light: hsl(from var(--color-quin-base) h calc(s / var(--color-light-sat-factor)) var(--color-light-lightness) / 100%);
+  --color-whirl-light: hsl(from var(--color-whirl-base) h calc(s / var(--color-light-sat-factor)) var(--color-light-lightness) / 100%);
+  --color-yoosure-light: hsl(from var(--color-yoosure-base) h calc(s / var(--color-light-sat-factor)) var(--color-light-lightness) / 100%);
 
   --font-main: "Bahnschrift", sans-serif;
 }
@@ -84,4 +113,46 @@
 
 .yoosure-card {
   background-color: var(--color-yoosure-dark)
+}
+
+/* these are doubled up because specificity */
+
+.andrew-member.andrew-member {
+  color: var(--color-andrew-light);
+}
+
+.digi-member.digi-member {
+  color: var(--color-digi-light);
+}
+
+.emerald-member.emerald-member {
+  color: var(--color-emerald-light);
+}
+
+.legi-member.legi-member {
+  color: var(--color-legi-light);
+}
+
+.liv-member.liv-member {
+  color: var(--color-liv-light);
+}
+
+.lucy-member.lucy-member {
+  color: var(--color-lucy-light);
+}
+
+.mac-member.mac-member {
+  color: var(--color-mac-light);
+}
+
+.quin-member.quin-member {
+  color: var(--color-quin-light);
+}
+
+.whirl-member.whirl-member {
+  color: var(--color-whirl-light);
+}
+
+.yoosure-member.yoosure-member {
+  color: var(--color-yoosure-light);
 }

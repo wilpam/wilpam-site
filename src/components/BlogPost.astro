@@ -1,15 +1,25 @@
 ---
-const { name, link, author, date } = Astro.props
+import MemberLink from "./MemberLink.astro";
+
+const { name, link, author, date, tags = [] } = Astro.props;
 ---
 
 <div>
-  <a href={link}>{name}</a><br>
-  <span class="post-metadata">by {author} - {date}</span>
+  <a class="title" href={link}>{name}</a><br>
+  <span class="post-metadata">by <MemberLink name={author} /> - {date}
+    {tags.length > 0 && <span class="post-tags"> - {tags.map((tag: string) => <a href={`/blog/tags/${encodeURIComponent(tag)}`}>#{tag}</a>)}</span>}
+  </span>
+
 </div>
 
 <style>
+  .title {
+    font-size: larger;
+  }
   .post-metadata {
-    opacity: 50%;
     font-size: smaller;
+  }
+  .post-tags {
+    gap: 4px;
   }
 </style>

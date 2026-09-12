@@ -1,0 +1,31 @@
+---
+import BlogPost from "../../../components/BlogPost.astro";
+import NarrowLayout from "../../../layouts/NarrowLayout.astro";
+import { formatDate, posts, postTags } from "../../../data/blog";
+
+export function getStaticPaths() {
+  const tags = [...new Set(posts.flatMap((post) => postTags(post)))];
+
+  return tags.map((tag) => ({
+    params: { tag },
+    props: { posts: posts.filter((post) => postTags(post).includes(tag)) }
+  }));
+}
+
+const tag = Astro.params.tag ?? "";
+const tagPosts = Astro.props.posts;
+---
+
+<NarrowLayout>
+  <h1>Posts tagged #{tag}</h1>
+  <ul id="entries">
+    {tagPosts.map((post: any) => <li><BlogPost name={post.frontmatter.title} link={post.url} author={post.frontmatter.author} date={formatDate(post.frontmatter.date)} tags={postTags(post)} /></li>)}
+  </ul>
+</NarrowLayout>
+
+<style>
+  #entries {
+    list-style-type: none;
+    padding-left: 0;
+  }
+</style>

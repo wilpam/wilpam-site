@@ -1,13 +1,13 @@
 ---
 import BlogPost from "../components/BlogPost.astro";
 import NarrowLayout from "../layouts/NarrowLayout.astro";
-const posts = Object.values(import.meta.glob('./blog/*.mdx', { eager: true }));
+import { formatDate, posts, postTags } from "../data/blog";
 ---
 
 <NarrowLayout>
 	<h1 id="welcome">Welcome to our blog</h1>
 	<ul id="entries">
-		{posts.map((post: any) => <li><BlogPost name={post.frontmatter.title} link={post.url} author={post.frontmatter.author} date={post.frontmatter.date.slice(0,10)} /></li>)}
+		{posts.map((post) => <li><BlogPost name={post.frontmatter.title} link={post.url} author={post.frontmatter.author} date={formatDate(post.frontmatter.date)} tags={postTags(post)} /></li>)}
 	</ul>
 </NarrowLayout>
 

@@ -1,5 +1,6 @@
 ---
 import NarrowLayout from "./NarrowLayout.astro";
+import MemberLink from "../components/MemberLink.astro";
 const { frontmatter } = Astro.props;
 const { title, author, date } = frontmatter;
 ---
@@ -8,7 +9,7 @@ const { title, author, date } = frontmatter;
   <div id="blog-header">
     <h1>{title}</h1>
     <div id="blog-subheader">
-      by {author} - {date.slice(0,10)}
+      by <MemberLink name={author} /> - {date.slice(0,10)}
     </div>
   </div>
   <slot />
