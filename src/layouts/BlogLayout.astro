@@ -2,10 +2,11 @@
 import NarrowLayout from "./NarrowLayout.astro";
 import MemberLink from "../components/MemberLink.astro";
 const { frontmatter } = Astro.props;
-const { title, author, date } = frontmatter;
+const { title, author, date, tags = [] } = frontmatter;
 ---
 
 <NarrowLayout>
+  <a id="blog-back" href="/blog">&lt; Back to blog</a>
   <div id="blog-header">
     <h1>{title}</h1>
     <div id="blog-subheader">
@@ -13,12 +14,24 @@ const { title, author, date } = frontmatter;
     </div>
   </div>
   <slot />
+  <div id="blog-tags">
+    Tags: {tags.length > 0 && tags.map((tag: string) => <a href={`/blog/tags/${encodeURIComponent(tag)}`}>#{tag}</a>)}
+  </div>
 </NarrowLayout>
 
 <style>
   #blog-subheader {
-    opacity: 50%;
+    color: #ffffff7f;
     font-size: smaller;
     transform: translateY(-1rem);
+  }
+
+  #blog-tags {
+    color: #ffffff7f;
+  }
+
+  #blog-back {
+    display: block;
+    transform: translateY(1rem);
   }
 </style>
